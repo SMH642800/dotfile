@@ -13,8 +13,11 @@ mason.setup({
         -- "sumneko_lua",
         -- "emmet_ls",
     },
+
+    PATH = "prepend", -- "skip" seems to cause the spawning error_msg
+
     -- auto-install configured servers (with lspconfig)
-    automatic_installation = true, -- not the same as ensure_installed
+    -- automatic_installation = true, -- not the same as ensure_installed
 })
 
 lspconfig.setup {
