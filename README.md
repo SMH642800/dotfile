@@ -23,7 +23,8 @@ this menghao develop environment setting config
 ### Step 3 (**install packer**)
 - Install [Packer](https://github.com/wbthomason/packer.nvim) by running the below command (under **.config/nvim/** ) :
 
-        git clone --depth 1 https://github.com/wbthomason/packer.nvim\ ~/.local/share/nvim/site/pack/packer/start/packer.nvim
+        git clone --depth 1 https://github.com/wbthomason/packer.nvim \
+ ~/.local/share/nvim/site/pack/packer/start/packer.nvim
 - 進入nvim介面，在底下輸入 : 
     - :PackerInstall
 
