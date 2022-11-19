@@ -85,6 +85,10 @@ this menghao develop environment setting config
 
           npm i -g typescript-language-server
 
+  - 安裝 tailwindcss langua server (**Optional**)
+
+          npm i -g @tailwindcss/lua-language-server
+
 ### Step 6 (**Auto-completion: Lspkind and cmp**)
 
 - To get LSP-aware auto-completion feature with fancy pictograms ,I use the following plugins:
