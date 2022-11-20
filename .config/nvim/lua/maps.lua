@@ -10,6 +10,9 @@ local keymap = vim.keymap -- for conciseness
 -- delete single character without copying into register
 keymap.set("n", "x", '"_x')
 
+-- delete single line without copying into register ("_: blackhole register)
+keymap.set("n", "d", '"_d')
+
 -- Select all
 keymap.set('n', '<C-a>', 'gg<S-v>G')
 
