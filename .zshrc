@@ -128,5 +128,13 @@ source $ZSH/oh-my-zsh.sh
 
 # ls command
 # LSCOLOR Reference: https://gist.github.com/thomd/7667642
-alias ls="ls -FG"
-export LSCOLORS="exgxfxdacxDaDaxbadacex"
+# alias ls="ls -FG"
+# export LSCOLORS="exgxfxdacxDaDaxbadacex"
+
+# need to disable in order for exa ls alias to work
+DISABLE_LS_COLORS="true"
+
+# exa aliases
+alias ls="exa --icons"
+alias ll="exa -l -g --icons"
+alias lt="exa --tree --icons -a -I '.git|__pycache__|.mypy_cache|.ipynb_checkpoints'"

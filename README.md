@@ -6,16 +6,23 @@ this menghao develop environment setting config
 
 - 參考網址: [Set up Neovim on a new M2 MacBook Air for coding React, TypeScript, Tailwind CSS, etc.](https://www.youtube.com/watch?v=ajmK0ZNcM4Q&list=PLxQA0uNgQDCICMRwlOzWAZBPL05XBC_br&index=16v)
 
+## exa – a modern replacement to ls command
+
+- ll :
+  ![exa_ll](./images/exa_ll.png)
+
+- ls :
+  ![exa_ls](./images/exa_ls.png)
+
+- lt :
+  ![exa_lt](./images/exa_lt.png)
+
 ## Neovim 操作
 
 - y : copy
 - p: paste
 - ^n : 向下選擇字詞
 - ^p : 向上選擇字詞
-
-```javascript
-let foo = "BEERWARE";
-```
 
 - "/" + {word} : 收尋字詞 （in visual model）
 
