@@ -14,9 +14,9 @@ opt.title = true
 -- tabs & indentation
 opt.tabstop = 4
 opt.shiftwidth = 4
-opt.smarttab = true 
-opt.expandtab = true 
-opt.autoindent = true 
+opt.smarttab = true
+opt.expandtab = true
+opt.autoindent = true
 opt.smartindent = true
 opt.breakindent = true
 
@@ -37,12 +37,12 @@ opt.showcmd = true
 opt.cmdheight = 1
 opt.laststatus = 2
 opt.scrolloff = 10
-opt.shell = 'iTerm2'
+opt.shell = 'ohmyzsh'
 opt.backupskip = { '/tmp/*', '/private/tmp/*' }
 opt.inccommand = 'split'
 
 -- Finding files - Search down into subfolders
-opt.path:append { '**' } 
+opt.path:append { '**' }
 
 opt.wildignore:append { '*/node_modules/*' }
 
@@ -52,8 +52,8 @@ vim.cmd([[let &t_Ce = "\e[4:0m"]])
 
 -- Turn off paste mode when leaving insert
 vim.api.nvim_create_autocmd("InsertLeave", {
-  pattern = '*',
-  command = "set nopaste"
+    pattern = '*',
+    command = "set nopaste"
 })
 
 -- Add asterisks in block comments

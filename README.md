@@ -6,6 +6,13 @@ this menghao develop environment setting config
 
 - 參考網址: [Set up Neovim on a new M2 MacBook Air for coding React, TypeScript, Tailwind CSS, etc.](https://www.youtube.com/watch?v=ajmK0ZNcM4Q&list=PLxQA0uNgQDCICMRwlOzWAZBPL05XBC_br&index=16v)
 
+# tmux
+
+- 參考網址: [How To Use and Configure Tmux Alongside Neovim](https://www.josean.com/posts/tmux-setup)
+- 參考影片: [Youtube](https://www.youtube.com/watch?v=U-omALWIBos)
+- 安裝 plugins: "(Ctrl + b)" + "(shift + i)"
+- 解除 plugins: "(Ctrl + b)" + "alt (iTerm2 -> Profiles -> Keys -> ESC+)" + "u"
+
 # Homebrew
 
 - 輸入下面這段指令來復原 homebrew 和 App Store 的軟體（記得要先安裝 homebrew）
@@ -22,6 +29,12 @@ this menghao develop environment setting config
 
 - lt :
   ![exa_lt](./images/exa_lt.png)
+
+## tmux 操作
+
+- "(Ctrl + b)" + "r" : refresh tmux config in tmux mode
+- "(Ctrl + b)" + "n: next, p: previous, 0~9" : switch between windows in session
+- "(Ctrl + b)" + "," : rename windows
 
 ## Neovim 操作
 
