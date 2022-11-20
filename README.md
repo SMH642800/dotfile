@@ -6,6 +6,12 @@ this menghao develop environment setting config
 
 - 參考網址: [Set up Neovim on a new M2 MacBook Air for coding React, TypeScript, Tailwind CSS, etc.](https://www.youtube.com/watch?v=ajmK0ZNcM4Q&list=PLxQA0uNgQDCICMRwlOzWAZBPL05XBC_br&index=16v)
 
+# Homebrew
+
+- 輸入下面這段指令來復原 homebrew 和 App Store 的軟體（記得要先安裝 homebrew）
+
+        brew bundle
+
 ## exa – a modern replacement to ls command
 
 - ll :
@@ -30,13 +36,16 @@ this menghao develop environment setting config
 
   - “space_bar” + “e” : expand explorer
   - “a” : add new file under path
+  - "r" : rename file name
+  - "d" : delete file
 
 - nvim-telescope
   - ; + r : live_grep, search word in this file
   - ; + f : find file
   - s + f : file browser
-  - “/” : search file mode
-  - “a” : create new file
+    - “/” : search file mode
+    - “a” : create new file - "r" : rename file name
+    - "d" : delete file
   - q : quit telescope mode
 
 – nvim-tabs-bufferline - t + e : open new tab and edit - shift + tab : go to left tab - tab : go to right tab
