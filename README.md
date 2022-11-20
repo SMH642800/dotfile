@@ -13,6 +13,10 @@ this menghao develop environment setting config
 - ^n : 向下選擇字詞
 - ^p : 向上選擇字詞
 
+```javascript
+let foo = "BEERWARE";
+```
+
 - "/" + {word} : 收尋字詞 （in visual model）
 
 - :NvimTreeToggle
