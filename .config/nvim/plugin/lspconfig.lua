@@ -67,9 +67,32 @@ protocol.CompletionItemKind = {
 -- Set up completion using nvim_cmp with LSP source
 local capabilities = require('cmp_nvim_lsp').default_capabilities()
 
-nvim_lsp.flow.setup {
+-- static typechecker for JavaScript
+-- nvim_lsp.flow.setup {
+--     on_attach = on_attach,
+--     capabilities = capabilities
+-- }
+
+-- python configuration with pyright LSP source
+nvim_lsp.pyright.setup {
     on_attach = on_attach,
-    capabilities = capabilities
+    capabilities = capabilities,
+    settings = {
+        pyright = {
+            autoImportCompletion = true,
+        },
+        python = {
+            venvPath = ".",
+            pythonPath = "./.venv/bin/python",
+            analysis = {
+                extraPaths = { "." },
+                autoSearchPaths = true,
+                diagnosticMode = 'openFilesOnly',
+                useLibraryCodeForTypes = true,
+                typeCheckingMode = 'off',
+            },
+        },
+    },
 }
 
 -- TypeScript configuration
@@ -79,11 +102,18 @@ nvim_lsp.tsserver.setup {
     cmd = { "typescript-language-server", "--stdio" },
     capabilities = capabilities
 }
-
+-- Language server for Swift and C/C++/Objective-C
 nvim_lsp.sourcekit.setup {
     on_attach = on_attach,
     capabilities = capabilities,
 }
+
+-- Language server for html, css, json, eslint with vscode-css-langserver-bin
+nvim_lsp.cssls.setup {
+    on_attach = on_attach,
+    capabilities = capabilities,
+}
+
 
 -- lua configuration
 nvim_lsp.sumneko_lua.setup {
@@ -108,20 +138,6 @@ nvim_lsp.sumneko_lua.setup {
     },
 }
 
-nvim_lsp.tailwindcss.setup {
-    on_attach = on_attach,
-    capabilities = capabilities
-}
-
-nvim_lsp.cssls.setup {
-    on_attach = on_attach,
-    capabilities = capabilities
-}
-
-nvim_lsp.astro.setup {
-    on_attach = on_attach,
-    capabilities = capabilities
-}
 
 vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(
     vim.lsp.diagnostic.on_publish_diagnostics, {

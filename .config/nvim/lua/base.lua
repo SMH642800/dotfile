@@ -37,7 +37,7 @@ opt.showcmd = true
 opt.cmdheight = 1
 opt.laststatus = 2
 opt.scrolloff = 10
-opt.shell = 'ohmyzsh'
+--opt.shell = 'ohmyzsh'
 opt.backupskip = { '/tmp/*', '/private/tmp/*' }
 opt.inccommand = 'split'
 
