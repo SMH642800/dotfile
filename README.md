@@ -61,7 +61,17 @@ this menghao develop environment setting config
     - "d" : delete file
   - q : quit telescope mode
 
-– nvim-tabs-bufferline - t + e : open new tab and edit - shift + tab : go to left tab - tab : go to right tab
+– nvim-tabs-bufferline 
+  - t + e : open new tab and edit 
+  - shift + tab : go to left tab 
+  - tab : go to right tab
+
+- LSP config
+  - gf : lsp_finder search
+  - gd : preview_definition
+  - gD : jump into declaration
+  - Ctrl + o : go back from declaration to your file
+  - q : close interface
 
 ### 安裝 Neovim
 
@@ -109,18 +119,11 @@ this menghao develop environment setting config
     ![lspconfig](./images/lspconfig.png)
 
 - install typescript language server
-
-  - 在安裝之前，要先安裝 node.js
-
-          brew install node.js
-
-  - 安裝完後執行以下 command line 來安裝 typescript language server
-
-          npm i -g typescript-language-server
-
-  - 安裝 tailwindcss langua server (**Optional**)
-
-          npm i -g @tailwindcss/lua-language-server
+  - go into nvim, type command line:
+  
+        :Mason
+  
+  - check the language servers were installed
 
 ### Step 6 (**Auto-completion: Lspkind and cmp**)
 
@@ -168,3 +171,13 @@ this menghao develop environment setting config
 - autopairs is for closing brackets.
 - 進入 nvim 介面，在底下輸入 :
   - :PackerInstall
+
+
+### Step 9 (**Code formatter: Prettier and null-ls**)
+- 在安裝之前，要先安裝 node.js
+
+      brew install node.js
+
+- 安裝prettier
+
+      brew install prettierd
