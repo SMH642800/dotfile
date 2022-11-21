@@ -4,7 +4,8 @@ this menghao develop environment setting config
 
 # Neovim
 
-- 參考網址: [Set up Neovim on a new M2 MacBook Air for coding React, TypeScript, Tailwind CSS, etc.](https://www.youtube.com/watch?v=ajmK0ZNcM4Q&list=PLxQA0uNgQDCICMRwlOzWAZBPL05XBC_br&index=16v)
+- 參考網址 1 : [Set up Neovim on a new M2 MacBook Air for coding React, TypeScript, Tailwind CSS, etc.](https://www.youtube.com/watch?v=ajmK0ZNcM4Q&list=PLxQA0uNgQDCICMRwlOzWAZBPL05XBC_br&index=16v)
+- 參考網址 2 : [How I Setup Neovim On My Mac To Make It Amazing - Complete Guide](https://www.youtube.com/watch?v=vdn_pKJUda8&list=PLnu5gT9QrFg36OehOdECFvxFFeMHhb_07&index=3)
 
 # tmux
 
@@ -53,6 +54,7 @@ this menghao develop environment setting config
   - "d" : delete file
 
 - nvim-telescope
+
   - ; + r : live_grep, search word in this file
   - ; + f : find file
   - s + f : file browser
@@ -61,18 +63,22 @@ this menghao develop environment setting config
     - "d" : delete file
   - q : quit telescope mode
 
-– nvim-tabs-bufferline
+- nvim-tabs-bufferline
 
-- t + e : open new tab and edit
-- shift + tab : go to left tab
-- tab : go to right tab
+  - t + e : open new tab and edit
+  - shift + tab : go to left tab
+  - tab : go to right tab
 
 - LSP config
+
   - gf : lsp_finder search
   - gd : preview_definition
   - gD : jump into declaration
   - Ctrl + o : go back from declaration to your file
   - q : close interface
+
+- Auto-completion
+  - Ctrl + e : close auto-completion suggestion
 
 ### 安裝 Neovim
 
