@@ -61,10 +61,11 @@ this menghao develop environment setting config
     - "d" : delete file
   - q : quit telescope mode
 
-– nvim-tabs-bufferline 
-  - t + e : open new tab and edit 
-  - shift + tab : go to left tab 
-  - tab : go to right tab
+– nvim-tabs-bufferline
+
+- t + e : open new tab and edit
+- shift + tab : go to left tab
+- tab : go to right tab
 
 - LSP config
   - gf : lsp_finder search
@@ -119,10 +120,11 @@ this menghao develop environment setting config
     ![lspconfig](./images/lspconfig.png)
 
 - install typescript language server
+
   - go into nvim, type command line:
-  
+
         :Mason
-  
+
   - check the language servers were installed
 
 ### Step 6 (**Auto-completion: Lspkind and cmp**)
@@ -172,12 +174,13 @@ this menghao develop environment setting config
 - 進入 nvim 介面，在底下輸入 :
   - :PackerInstall
 
+### Step 9 (**Code formatter: mason-null-ls and null-ls**)
 
-### Step 9 (**Code formatter: Prettier and null-ls**)
-- 在安裝之前，要先安裝 node.js
+- 進入 nvim 介面，輸入以下指令以查看是否安裝 formatters & linters
 
-      brew install node.js
+        :Mason
 
-- 安裝prettier
+- 在 Mason 介面下的操作：
 
-      brew install prettierd
+  - i : install
+  - shift + x : uninstall
