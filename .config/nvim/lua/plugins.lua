@@ -16,6 +16,7 @@ packer.startup(function(use)
     use 'neovim/nvim-lspconfig' -- LSP --
     use 'onsails/lspkind-nvim' -- vscode-like pictograms --
     use 'akinsho/nvim-bufferline.lua' -- Tabs-Bufferline --
+    use 'jose-elias-alvarez/typescript.nvim' -- typescript LSP
 
     -- autocompletion
     use 'hrsh7th/cmp-buffer' -- nvim-cmp source for buffer words --
@@ -57,6 +58,7 @@ packer.startup(function(use)
     use("williamboman/mason.nvim") -- in charge of managing lsp servers, linters & formatters
     use("williamboman/mason-lspconfig.nvim") -- bridges gap b/w mason & lspconfig
     use 'jose-elias-alvarez/null-ls.nvim' -- Use Neovim as a language server to inject LSP diagnostics, code actions, and more via Lua
+    use 'jayp0521/mason-null-ls.nvim'
 
     -- git integration
     use 'lewis6991/gitsigns.nvim' -- show line modifications on left hand side

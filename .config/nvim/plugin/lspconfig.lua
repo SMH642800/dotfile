@@ -67,6 +67,10 @@ protocol.CompletionItemKind = {
 -- Set up completion using nvim_cmp with LSP source
 local capabilities = require('cmp_nvim_lsp').default_capabilities()
 
+-- import typescript
+local typscript_setup, typescript = pcall(require, 'typescript')
+if not typscript_setup then return end
+
 -- static typechecker for JavaScript
 -- nvim_lsp.flow.setup {
 --     on_attach = on_attach,
@@ -102,6 +106,15 @@ nvim_lsp.tsserver.setup {
     cmd = { "typescript-language-server", "--stdio" },
     capabilities = capabilities
 }
+
+-- configure typescript server with plugin
+typescript.setup({
+    server = {
+        capabilities = capabilities,
+        on_attach = on_attach,
+    },
+})
+
 -- Language server for Swift and C/C++/Objective-C
 nvim_lsp.sourcekit.setup {
     on_attach = on_attach,
