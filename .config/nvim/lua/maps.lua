@@ -3,6 +3,14 @@ vim.g.mapleader = " "
 
 local keymap = vim.keymap -- for conciseness
 
+-- undo redo in lua just like vs code
+local map = function(mode, key, command)
+	vim.api.nvim_set_keymap(mode, key, command, {
+		noremap = true,
+		silent = true,
+	})
+end
+
 ---------------------
 -- General Keymaps
 ---------------------
@@ -14,10 +22,20 @@ keymap.set("n", "x", '"_x')
 keymap.set("n", "d", '"_d')
 
 -- Select all
-keymap.set('n', '<C-a>', 'gg<S-v>G')
+keymap.set("n", "<C-a>", "gg<S-v>G")
 
 -- New tab
-keymap.set('n', 'te', ':tabedit<CR>')
+keymap.set("n", "te", ":tabedit<CR>")
+
+-- undo
+map("n", "<C-z>", "u", noremap_silent)
+map("i", "<C-z>", "<C-o>u", noremap_silent)
+map("v", "<C-z>", "<esc>u", noremap_silent)
+
+-- redo
+-- redo for normal mode is built-in
+map("i", "<C-r>", "<C-o><C-r>", noremap_silent)
+map("v", "<C-r>", "<esc><C-r>", noremap_silent)
 
 ----------------------
 -- Plugin Keybinds
