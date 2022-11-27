@@ -156,8 +156,7 @@ git clone --depth 1 https://github.com/wbthomason/packer.nvim \
 
 5. **Syntax highlightings: Treesitter**
 
-- First install tree-sitter: `brew install tree-sitter`
-- 再來進入以下 Path 進行編輯: `.config/nvim/lua/plugins.lua`
+- 進入以下 Path 進行編輯: `.config/nvim/lua/plugins.lua`
 - 暫時修改 packer plugin 的描述：
 
   ```
