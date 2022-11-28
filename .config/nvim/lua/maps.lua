@@ -27,6 +27,10 @@ keymap.set("n", "<C-a>", "gg<S-v>G")
 -- New tab
 keymap.set("n", "te", ":tabedit<CR>")
 
+-- split tab
+keymap.set("n", "ss", ":split<Return><C-w>w") -- split window in horizontal (left-right)
+keymap.set("n", "sv", ":vsplit<Return><C-w>w") -- split window in vertical (up-down)
+
 -- undo
 map("n", "<C-z>", "u", noremap_silent)
 map("i", "<C-z>", "<C-o>u", noremap_silent)

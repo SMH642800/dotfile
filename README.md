@@ -86,6 +86,11 @@ this menghao develop environment setting config
   - `shift + tab` : go to left tab
   - `tab` : go to right tab
 
+- nvim-tabs-windows:
+
+  - `ss` : split windows in horizontal (left-right)
+  - `sv` : split windows in vertical (up-down)
+
 - LSP config:
 
   - `gf` : lsp_finder search
