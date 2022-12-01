@@ -76,7 +76,8 @@ this menghao develop environment setting config
   - `; + f` : find file
   - `s + f` : file browser
     - `/` : search file mode
-    - `a` : create new file - "r" : rename file name
+    - `a` : create new file
+    - "r" : rename file name
     - `d` : delete file
   - `q`: quit telescope mode
 
@@ -88,8 +89,8 @@ this menghao develop environment setting config
 
 - nvim-tabs-windows:
 
-  - `ss` : split windows in horizontal (left-right)
-  - `sv` : split windows in vertical (up-down)
+  - `ss` : split windows in horizontal (up-down)
+  - `sv` : split windows in vertical (left-right)
 
 - LSP config:
 
