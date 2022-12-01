@@ -92,12 +92,15 @@ this menghao develop environment setting config
   - `ss` : split windows in horizontal (up-down)
   - `sv` : split windows in vertical (left-right)
 
-- LSP config:
+- LSPsaga config:
 
+  - `K` : show value type
+  - `Ctrl + j` : jump to error or warning line and show the messages
   - `gf` : lsp_finder search
   - `gd`: preview_definition
   - `gD` : jump into declaration
   - `gi` : jump into implementation
+  - `gr` : rename
   - `Ctrl + o` : go back from declaration to your file
   - `q` : close interface
 
