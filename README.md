@@ -29,6 +29,8 @@ this menghao develop environment setting config
 
 # Homebrew
 
+- 安裝好 homebrew 後, 編輯.zshrc -> 輸入`export HOMEBREW_INSTALL_FROM_API=1`來設定 homebrew
+- 在輸入`brew untap homebrew/core`、`brew untap homebrew/cask`
 - 輸入下面這段指令來復原 homebrew 和 App Store 的軟體（記得要先安裝 homebrew）
 
         brew bundle
