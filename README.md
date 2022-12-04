@@ -8,14 +8,30 @@ this menghao develop environment setting config
 - 參考網址 2 : [How I Setup Neovim On My Mac To Make It Amazing - Complete Guide](https://www.youtube.com/watch?v=vdn_pKJUda8&list=PLnu5gT9QrFg36OehOdECFvxFFeMHhb_07&index=3)
 
 - Screen Shot:
-  ![nvim_tree](./images/nvim_tree.png)
-  ![telescope_filebrowser](./images/telescope_filebrowser.png)
-  ![telescope_file_search](./images/telescope_file_search.png)
-  ![telescope_live_grep_search](./images/telescope_live_grep_search.png)
-  ![color](./images/color.png)
-  ![auto_path](./images/auto_path.png)
-  ![autocompletion](./images/autocompletion.png)
-  ![autopairs](./images/autopairs.png)
+
+  - nvim_tree
+    ![nvim_tree](./images/nvim_tree.png)
+
+  - telescope_filebrowser
+    ![telescope_filebrowser](./images/telescope_filebrowser.png)
+
+  - telescope_file_search
+    ![telescope_file_search](./images/telescope_file_search.png)
+
+  - telescope_live_grep_search
+    ![telescope_live_grep_search](./images/telescope_live_grep_search.png)
+
+  - color code
+    ![color](./images/color.png)
+
+  - auto_path
+    ![auto_path](./images/auto_path.png)
+
+  - autocompletion
+    ![autocompletion](./images/autocompletion.png)
+
+  - autopairs
+    ![autopairs](./images/autopairs.png)
 
 # tmux
 
