@@ -20,6 +20,7 @@ keymap.set("n", "x", '"_x')
 
 -- delete single line without copying into register ("_: blackhole register)
 keymap.set("n", "d", '"_d')
+keymap.set("v", "d", '"_d')
 
 -- Select all
 keymap.set("n", "<C-a>", "gg<S-v>G")
