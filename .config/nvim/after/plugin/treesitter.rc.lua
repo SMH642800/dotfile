@@ -26,6 +26,7 @@ ts.setup({
 		"lua",
 		"python",
 		"markdown",
+		"markdown_inline",
 		"c",
 	},
 	autotag = {

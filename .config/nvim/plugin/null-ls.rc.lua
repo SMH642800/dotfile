@@ -26,7 +26,8 @@ null_ls.setup({
 	sources = {
 		formatting.prettier, -- js/ts formatter
 		formatting.stylua, -- lua formatter
-		diagnostics.eslint_d.with({ -- js/ts linter
+		diagnostics.eslint_d.with({
+			-- js/ts linter
 			diagnostics_format = "[eslint] #{m}\n(#{c})",
 			-- only enable eslint if root has .eslintrc.js (not in youtube nvim video)
 			condition = function(utils)
@@ -34,9 +35,10 @@ null_ls.setup({
 			end,
 		}),
 		formatting.black, -- python formatter
-		diagnostics.flake8, -- python linter
+		diagnostics.flake8.with({
+			prefer_local = ".venv/bin",
+		}), -- python linter
 	},
-
 	-- configure format on save
 	on_attach = function(client, bufnr)
 		if client.supports_method("textDocument/formatting") then
