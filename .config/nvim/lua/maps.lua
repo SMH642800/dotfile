@@ -47,4 +47,8 @@ map("v", "<C-r>", "<esc><C-r>", noremap_silent)
 ----------------------
 
 -- nvim-tree
-keymap.set("n", "<leader>e", ":NvimTreeToggle<CR>") -- toggle file explorer
+--keymap.set("n", "<leader>e", ":NvimTreeToggle<CR>") -- toggle file explorer
+
+-- NeoTree
+map("n", "<leader>e", "<CMD>Neotree toggle<CR>")
+map("n", "<leader>o", "<CMD>Neotree focus<CR>")
