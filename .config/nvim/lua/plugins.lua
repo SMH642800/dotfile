@@ -41,7 +41,16 @@ packer.startup(function(use)
 	use("windwp/nvim-ts-autotag")
 
 	use("norcalli/nvim-colorizer.lua") -- colorizer --
-	use("glepnir/lspsaga.nvim") -- LSP UIs --
+	--	use("glepnir/lspsaga.nvim") -- LSP UIs --
+	use({
+		"glepnir/lspsaga.nvim",
+		branch = "main",
+		requires = {
+			{ "nvim-tree/nvim-web-devicons" },
+			--Please make sure you install markdown and markdown_inline parser
+			{ "nvim-treesitter/nvim-treesitter" },
+		},
+	})
 
 	-- file explorer
 	use("nvim-tree/nvim-tree.lua")
