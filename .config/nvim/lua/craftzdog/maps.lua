@@ -1,7 +1,5 @@
--- set leader key to space
+local keymap = vim.keymap
 vim.g.mapleader = " "
-
-local keymap = vim.keymap -- for conciseness
 
 -- undo redo in lua just like vs code
 local map = function(mode, key, command)
@@ -11,26 +9,42 @@ local map = function(mode, key, command)
   })
 end
 
----------------------
--- General Keymaps
----------------------
+keymap.set('n', 'x', '"_x')
 
--- delete single character without copying into register
-keymap.set("n", "x", '"_x')
+-- Increment/decrement
+keymap.set('n', '+', '<C-a>')
+keymap.set('n', '-', '<C-x>')
+
+-- Delete a word backwards
+keymap.set('n', 'dw', 'vb"_d')
 
 -- delete single line without copying into register ("_: blackhole register)
 keymap.set("n", "d", '"_d')
 keymap.set("v", "d", '"_d')
 
 -- Select all
-keymap.set("n", "<C-a>", "gg<S-v>G")
+keymap.set('n', '<C-a>', 'gg<S-v>G')
+
+-- Save with root permission (not working for now)
+--vim.api.nvim_create_user_command('W', 'w !sudo tee > /dev/null %', {})
 
 -- New tab
-keymap.set("n", "te", ":tabedit<CR>")
+keymap.set('n', 'te', ':tabedit<CR>')
+-- Split window
+keymap.set('n', 'ss', ':split<Return><C-w>w')
+keymap.set('n', 'sv', ':vsplit<Return><C-w>w')
+-- Move window
+keymap.set('n', '<Space>', '<C-w>w')
+keymap.set('', 'sh', '<C-w>h')
+keymap.set('', 'sk', '<C-w>k')
+keymap.set('', 'sj', '<C-w>j')
+keymap.set('', 'sl', '<C-w>l')
 
--- split tab
-keymap.set("n", "ss", ":split<Return><C-w>w")  -- split window in horizontal (left-right)
-keymap.set("n", "sv", ":vsplit<Return><C-w>w") -- split window in vertical (up-down)
+-- Resize window
+keymap.set('n', '<C-w><left>', '<C-w><')
+keymap.set('n', '<C-w><right>', '<C-w>>')
+keymap.set('n', '<C-w><up>', '<C-w>+')
+keymap.set('n', '<C-w><down>', '<C-w>-')
 
 -- undo
 map("n", "<C-z>", "u", noremap_silent)

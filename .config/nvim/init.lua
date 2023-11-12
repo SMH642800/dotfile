@@ -1,15 +1,16 @@
-require('base')
-require('highlights')
-require('maps')
-require('plugins')
+require('craftzdog.base')
+require('craftzdog.highlights')
+require('craftzdog.maps')
+require('craftzdog.plugins')
 
-local has = vim.fn.has
-local is_mac = has "macunix"
-local is_win = has "win32"
+local os = vim.loop.os_uname().sysname
 
-if is_mac then
-    require('macos')
-end
-if is_win then
-    require('windows')
+if os == "Darwin" then
+  require('craftzdog.macos')
+elseif os == "Linux" then
+  require('craftzdog.linux')
+elseif os == "Windows_NT" then
+  require('craftzdog.windows')
+else
+  error("Unknown OS")
 end

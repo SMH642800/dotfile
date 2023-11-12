@@ -1,6 +1,7 @@
 tap "homebrew/bundle"
 tap "homebrew/core"
 brew "exa"
+Brew "eza"
 brew "git"
 brew "xz"
 brew "neovim"

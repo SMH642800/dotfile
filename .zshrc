@@ -6,7 +6,7 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
 fi
 
 # homebrew set
-export HOMEBREW_INSTALL_FROM_API=1
+# export HOMEBREW_INSTALL_FROM_API=1
 
 # poetry path
 export PATH=$PATH:$HOME/.local/bin
@@ -16,6 +16,17 @@ export PYENV_ROOT="$HOME/.pyenv"
 export PATH="$PYENV_ROOT/bin:$PATH" 
 eval "$(pyenv init --path)" 
 eval "$(pyenv init -)"
+
+# java home path
+export JAVA_17_HOME=/Library/Java/JavaVirtualMachines/jdk-17.jdk/Contents/Home
+# set default JDK-version
+export JAVA_HOME=$JAVA_17_HOME
+CLASSPATH=$JAVA_HOME/lib/tools.jar:$JAVA_HOME/lib/dt.jar:.
+# set alias terminal command to change JDK versions
+alias jdk17="export JAVA_HOME=$JAVA_17_HOME"
+export JAVA_HOME
+export PATH
+export CLASSPATH
 
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
@@ -136,9 +147,13 @@ source $ZSH/oh-my-zsh.sh
 # export LSCOLORS="exgxfxdacxDaDaxbadacex"
 
 # need to disable in order for exa ls alias to work
-DISABLE_LS_COLORS="true"
+# DISABLE_LS_COLORS="true"
 
 # exa aliases
-alias ls="exa --icons"
-alias ll="exa -l -g --icons"
-alias lt="exa --tree --icons -a -I '.git|__pycache__|.mypy_cache|.ipynb_checkpoints'"
+alias ls="eza --color=auto --icons"
+alias ll="eza -l -g --color=auto --icons"
+alias lt="eza --tree --color=auto --icons -a -I '.git|__pycache__|.mypy_cache|.ipynb_checkpoints'"
+
+# Alias
+function rsynclocalfiles { rsync -avrzP -e "ssh" ${1} smh642800@vanilla:~/${2}; } # {1}: src files, {2}: host name, {3}: destination
+function rsyncserverfiles { rsync -avrzP -e "ssh" smh642800@vanilla:~/${1} ${2}; } # {1}: src files, {2}: host name, {3}: destination
