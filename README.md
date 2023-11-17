@@ -76,6 +76,8 @@ this menghao develop environment setting config
 - `p`: paste
 - `^n` : 向下選擇字詞
 - `^p` : 向上選擇字詞
+- `<Ctrl-z>` : 恢復上一個改動
+- `<Ctrl-r>` : 恢復下一個改動
 
   - `^`: `Ctrl`
 
