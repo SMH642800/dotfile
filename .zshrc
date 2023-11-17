@@ -157,3 +157,7 @@ alias lt="eza --tree --color=auto --icons -a -I '.git|__pycache__|.mypy_cache|.i
 # Alias
 function rsynclocalfiles { rsync -avrzP -e "ssh" ${1} smh642800@vanilla:~/${2}; } # {1}: src files, {2}: host name, {3}: destination
 function rsyncserverfiles { rsync -avrzP -e "ssh" smh642800@vanilla:~/${1} ${2}; } # {1}: src files, {2}: host name, {3}: destination
+
+# enable undercurl in neovim and tmux
+export TERM="xterm-256color"
+[[ -n $TMUX ]] && export TERM="screen-256color"

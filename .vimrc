@@ -33,3 +33,6 @@ set ai
 " show line number & number of words at the right bottom
 set ruler
 
+" enable undercurl in neovim and tumx "
+vim.opt.spell = true
+vim.opt.spelllang = { 'en_us' }
