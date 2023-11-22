@@ -1,3 +1,6 @@
 [user]
 	name = SMH642800
 	email = SMH642800@gmail.com
+[core]
+	excludesfile = /Users/menghao/.gitignore
+	editor = nvim
