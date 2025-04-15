@@ -158,6 +158,21 @@ alias lt="eza --tree --color=auto --icons -a -I '.git|__pycache__|.mypy_cache|.i
 function rsynclocalfiles { rsync -avrzP -e "ssh" ${1} smh642800@vanilla:~/${2}; } # {1}: src files, {2}: host name, {3}: destination
 function rsyncserverfiles { rsync -avrzP -e "ssh" smh642800@vanilla:~/${1} ${2}; } # {1}: src files, {2}: host name, {3}: destination
 
+# alias poetry environment command
+# 啟動 Poetry 虛擬環境
+function poetry_env_on() {
+  eval "$(poetry env activate)"
+}
+
+# 離開 Poetry 虛擬環境
+function poetry_env_off() {
+  if [[ -n "$VIRTUAL_ENV" ]]; then
+    deactivate
+  else
+    echo "Not in a virtual environment."
+  fi
+}
+
 # enable undercurl in neovim and tmux
 export TERM="xterm-256color"
-[[ -n $TMUX ]] && export TERM="screen-256color"
+# [[ -n $TMUX ]] && export TERM="screen-256color"
